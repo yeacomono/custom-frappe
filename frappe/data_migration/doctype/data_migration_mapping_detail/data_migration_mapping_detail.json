@@ -1,0 +1,54 @@
+{
+ "actions": [],
+ "creation": "2017-08-11 05:09:10.900237",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "remote_fieldname",
+  "local_fieldname",
+  "is_child_table",
+  "child_table_mapping"
+ ],
+ "fields": [
+  {
+   "fieldname": "remote_fieldname",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Remote Fieldname",
+   "reqd": 1
+  },
+  {
+   "fieldname": "local_fieldname",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Local Fieldname",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_child_table",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Child Table"
+  },
+  {
+   "depends_on": "is_child_table",
+   "fieldname": "child_table_mapping",
+   "fieldtype": "Link",
+   "label": "Child Table Mapping",
+   "options": "Data Migration Mapping"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2023-09-21 19:43:57.569479",
+ "modified_by": "Administrator",
+ "module": "Data Migration",
+ "name": "Data Migration Mapping Detail",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

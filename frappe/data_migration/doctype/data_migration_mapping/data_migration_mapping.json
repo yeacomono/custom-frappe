@@ -1,0 +1,130 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:mapping_name",
+ "beta": 1,
+ "creation": "2017-08-11 05:11:49.975801",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "mapping_name",
+  "remote_objectname",
+  "remote_primary_key",
+  "local_doctype",
+  "local_primary_key",
+  "column_break_5",
+  "mapping_type",
+  "page_length",
+  "migration_id_field",
+  "mapping",
+  "fields",
+  "condition_detail",
+  "condition"
+ ],
+ "fields": [
+  {
+   "fieldname": "mapping_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Mapping Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "remote_objectname",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Remote Objectname",
+   "reqd": 1
+  },
+  {
+   "fieldname": "remote_primary_key",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Remote Primary Key",
+   "reqd": 1
+  },
+  {
+   "fieldname": "local_doctype",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Local DocType",
+   "options": "DocType",
+   "reqd": 1
+  },
+  {
+   "fieldname": "local_primary_key",
+   "fieldtype": "Data",
+   "label": "Local Primary Key"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mapping_type",
+   "fieldtype": "Select",
+   "label": "Mapping Type",
+   "options": "Push\nPull\nSync"
+  },
+  {
+   "default": "10",
+   "fieldname": "page_length",
+   "fieldtype": "Int",
+   "label": "Page Length"
+  },
+  {
+   "fieldname": "migration_id_field",
+   "fieldtype": "Data",
+   "label": "Migration ID Field",
+   "read_only": 1
+  },
+  {
+   "fieldname": "mapping",
+   "fieldtype": "Section Break",
+   "label": "Mapping"
+  },
+  {
+   "fieldname": "fields",
+   "fieldtype": "Table",
+   "label": "Field Maps",
+   "options": "Data Migration Mapping Detail",
+   "reqd": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "condition_detail",
+   "fieldtype": "Section Break",
+   "label": "Condition Detail"
+  },
+  {
+   "fieldname": "condition",
+   "fieldtype": "Code",
+   "label": "Condition"
+  }
+ ],
+ "links": [],
+ "modified": "2023-09-21 19:43:57.315899",
+ "modified_by": "Administrator",
+ "module": "Data Migration",
+ "name": "Data Migration Mapping",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

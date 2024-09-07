@@ -1,0 +1,75 @@
+{
+ "actions": [],
+ "creation": "2016-09-21 08:03:01.009852",
+ "doctype": "DocType",
+ "document_type": "System",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "api_username",
+  "api_password",
+  "signature",
+  "paypal_sandbox",
+  "redirect_to"
+ ],
+ "fields": [
+  {
+   "fieldname": "api_username",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "API Username",
+   "reqd": 1
+  },
+  {
+   "fieldname": "api_password",
+   "fieldtype": "Password",
+   "in_list_view": 1,
+   "label": "API Password",
+   "reqd": 1
+  },
+  {
+   "fieldname": "signature",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Signature",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "description": "Check this if you are testing your payment using the Sandbox API",
+   "fieldname": "paypal_sandbox",
+   "fieldtype": "Check",
+   "label": "Use Sandbox"
+  },
+  {
+   "description": "Mention transaction completion page URL",
+   "fieldname": "redirect_to",
+   "fieldtype": "Data",
+   "label": "Redirect To"
+  }
+ ],
+ "in_create": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2023-09-21 19:41:56.509200",
+ "modified_by": "Administrator",
+ "module": "Integrations",
+ "name": "PayPal Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "read_only": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

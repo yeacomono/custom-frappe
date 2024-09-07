@@ -1,0 +1,210 @@
+{
+ "actions": [],
+ "creation": "2017-09-11 12:55:27.597728",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "data_migration_plan",
+  "data_migration_connector",
+  "status",
+  "start_time",
+  "end_time",
+  "remote_id",
+  "current_mapping",
+  "current_mapping_start",
+  "current_mapping_delete_start",
+  "current_mapping_type",
+  "current_mapping_action",
+  "total_pages",
+  "percent_complete",
+  "trigger_name",
+  "logs_sb",
+  "push_insert",
+  "push_update",
+  "push_delete",
+  "push_failed",
+  "column_break_16",
+  "pull_insert",
+  "pull_update",
+  "pull_failed",
+  "log"
+ ],
+ "fields": [
+  {
+   "fieldname": "data_migration_plan",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Data Migration Plan",
+   "options": "Data Migration Plan",
+   "reqd": 1
+  },
+  {
+   "fieldname": "data_migration_connector",
+   "fieldtype": "Link",
+   "label": "Data Migration Connector",
+   "options": "Data Migration Connector",
+   "reqd": 1
+  },
+  {
+   "default": "Pending",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "no_copy": 1,
+   "options": "Pending\nStarted\nPartial Success\nSuccess\nFail\nError",
+   "read_only": 1
+  },
+  {
+   "fieldname": "start_time",
+   "fieldtype": "Datetime",
+   "label": "Start Time"
+  },
+  {
+   "fieldname": "end_time",
+   "fieldtype": "Datetime",
+   "label": "End Time"
+  },
+  {
+   "fieldname": "remote_id",
+   "fieldtype": "Data",
+   "label": "Remote ID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "current_mapping",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Current Mapping",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "current_mapping_start",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Current Mapping Start",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "current_mapping_delete_start",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Current Mapping Delete Start",
+   "no_copy": 1
+  },
+  {
+   "fieldname": "current_mapping_type",
+   "fieldtype": "Select",
+   "label": "Current Mapping Type",
+   "options": "Push\nPull"
+  },
+  {
+   "depends_on": "eval:(doc.status !== 'Pending')",
+   "fieldname": "current_mapping_action",
+   "fieldtype": "Select",
+   "label": "Current Mapping Action",
+   "no_copy": 1,
+   "options": "Insert\nDelete",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_pages",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Total Pages",
+   "no_copy": 1
+  },
+  {
+   "fieldname": "percent_complete",
+   "fieldtype": "Percent",
+   "label": "Percent Complete",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "trigger_name",
+   "fieldtype": "Data",
+   "label": "Trigger Name"
+  },
+  {
+   "depends_on": "eval:(doc.status !== 'Pending')",
+   "fieldname": "logs_sb",
+   "fieldtype": "Section Break",
+   "label": "Logs",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "push_insert",
+   "fieldtype": "Int",
+   "label": "Push Insert"
+  },
+  {
+   "fieldname": "push_update",
+   "fieldtype": "Int",
+   "label": "Push Update"
+  },
+  {
+   "fieldname": "push_delete",
+   "fieldtype": "Int",
+   "label": "Push Delete"
+  },
+  {
+   "fieldname": "push_failed",
+   "fieldtype": "Code",
+   "label": "Push Failed"
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pull_insert",
+   "fieldtype": "Int",
+   "label": "Pull Insert"
+  },
+  {
+   "fieldname": "pull_update",
+   "fieldtype": "Int",
+   "label": "Pull Update"
+  },
+  {
+   "fieldname": "pull_failed",
+   "fieldtype": "Code",
+   "label": "Pull Failed"
+  },
+  {
+   "depends_on": "eval:doc.failed_log !== '[]'",
+   "fieldname": "log",
+   "fieldtype": "Code",
+   "label": "Log",
+   "no_copy": 1,
+   "read_only": 1
+  }
+ ],
+ "links": [],
+ "modified": "2023-09-21 20:03:16.574632",
+ "modified_by": "Administrator",
+ "module": "Data Migration",
+ "name": "Data Migration Run",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

@@ -1,0 +1,245 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2023-12-14 18:24:38.154462",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "datos_del_proveedor",
+  "nombre_cliente",
+  "ruc",
+  "columna1",
+  "telefono",
+  "correo",
+  "datos_de_factura",
+  "fecha_emision",
+  "fecha_vencimiento",
+  "dias_vencidos",
+  "columna2",
+  "serie",
+  "numero",
+  "monto",
+  "monto_sin_detraccion",
+  "detraccion",
+  "pago_section",
+  "fecha_de_pago",
+  "number_operations",
+  "nro_cuenta_de_pago",
+  "estado_de_pago",
+  "usuario_anula",
+  "nombre_usuario_anula",
+  "column_break_23",
+  "banco",
+  "usuario_que_registro_el_pago",
+  "voucher_de_pago",
+  "ver_documento",
+  "estado_factura",
+  "cop_id"
+ ],
+ "fields": [
+  {
+   "fieldname": "datos_del_proveedor",
+   "fieldtype": "Section Break",
+   "label": "Datos del proveedor"
+  },
+  {
+   "fieldname": "nombre_cliente",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Nombre cliente",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ruc",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Ruc",
+   "reqd": 1
+  },
+  {
+   "fieldname": "telefono",
+   "fieldtype": "Data",
+   "label": "Telefono"
+  },
+  {
+   "fieldname": "correo",
+   "fieldtype": "Data",
+   "label": "Correo"
+  },
+  {
+   "fieldname": "datos_de_factura",
+   "fieldtype": "Section Break",
+   "label": "Datos de la Factura"
+  },
+  {
+   "fieldname": "fecha_emision",
+   "fieldtype": "Date",
+   "label": "Fecha de emision",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fecha_vencimiento",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Fecha de vencimiento",
+   "reqd": 1
+  },
+  {
+   "fieldname": "serie",
+   "fieldtype": "Data",
+   "label": "Serie",
+   "reqd": 1
+  },
+  {
+   "fieldname": "numero",
+   "fieldtype": "Data",
+   "label": "Numero",
+   "reqd": 1
+  },
+  {
+   "fieldname": "monto",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Monto",
+   "reqd": 1
+  },
+  {
+   "fieldname": "monto_sin_detraccion",
+   "fieldtype": "Data",
+   "label": "Monto sin detracci\u00f3n",
+   "reqd": 1
+  },
+  {
+   "fieldname": "detraccion",
+   "fieldtype": "Data",
+   "label": "Detracci\u00f3n",
+   "reqd": 1
+  },
+  {
+   "fieldname": "estado_factura",
+   "fieldtype": "Section Break",
+   "label": "Estado de la factura"
+  },
+  {
+   "fieldname": "columna1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "columna2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "options": "CC-"
+  },
+  {
+   "fieldname": "pago_section",
+   "fieldtype": "Section Break",
+   "label": "PAGO"
+  },
+  {
+   "fieldname": "fecha_de_pago",
+   "fieldtype": "Date",
+   "label": "Fecha de Pago"
+  },
+  {
+   "fieldname": "number_operations",
+   "fieldtype": "Data",
+   "label": "N\u00b0 de Operacion"
+  },
+  {
+   "fieldname": "nro_cuenta_de_pago",
+   "fieldtype": "Data",
+   "label": "Nro Cuenta de Pago"
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "banco",
+   "fieldtype": "Select",
+   "label": "Banco",
+   "options": "\nBCP\nBBVA\nCCI\nBANCO DE LA NACI\u00d3N\nBAN BIF\nSCOTIABANK\nPICHINCHA\nBANBIF"
+  },
+  {
+   "fieldname": "voucher_de_pago",
+   "fieldtype": "Attach",
+   "label": "Documento de Pago"
+  },
+  {
+   "fieldname": "usuario_que_registro_el_pago",
+   "fieldtype": "Data",
+   "label": "Usuario que registro el pago"
+  },
+  {
+   "fieldname": "ver_documento",
+   "fieldtype": "Button",
+   "label": " Ver Documento"
+  },
+  {
+   "fieldname": "estado_de_pago",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Estado Documento",
+   "options": "Por Pagar\nPagado\nPago Rechazado\nVencido\nAnulado"
+  },
+  {
+   "fieldname": "cop_id",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Comprobante Empresarial"
+  },
+  {
+   "fieldname": "dias_vencidos",
+   "fieldtype": "Int",
+   "in_filter": 1,
+   "label": "Dias Vencidos",
+   "read_only": 1
+  },
+  {
+   "fieldname": "usuario_anula",
+   "fieldtype": "Data",
+   "ignore_user_permissions": 1,
+   "label": "Usuario Anula",
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "nombre_usuario_anula",
+   "fieldtype": "Data",
+   "ignore_user_permissions": 1,
+   "label": "Nombre usuario anula",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-07-05 02:33:57.753288",
+ "modified_by": "Administrator",
+ "module": "Core",
+ "name": "Creditos y Cobranzas",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "dias_vencidos"
+}

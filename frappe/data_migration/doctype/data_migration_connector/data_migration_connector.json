@@ -1,0 +1,92 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:connector_name",
+ "beta": 1,
+ "creation": "2017-08-11 05:03:27.091416",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "connector_name",
+  "connector_type",
+  "python_module",
+  "authentication_credentials",
+  "hostname",
+  "database_name",
+  "username",
+  "password"
+ ],
+ "fields": [
+  {
+   "fieldname": "connector_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Connector Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "depends_on": "eval:!doc.is_custom",
+   "fieldname": "connector_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Connector Type",
+   "options": "\nFrappe\nCustom"
+  },
+  {
+   "depends_on": "eval:doc.connector_type == 'Custom'",
+   "fieldname": "python_module",
+   "fieldtype": "Data",
+   "label": "Python Module"
+  },
+  {
+   "fieldname": "authentication_credentials",
+   "fieldtype": "Section Break",
+   "label": "Authentication Credentials"
+  },
+  {
+   "fieldname": "hostname",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Hostname"
+  },
+  {
+   "fieldname": "database_name",
+   "fieldtype": "Data",
+   "label": "Database Name"
+  },
+  {
+   "fieldname": "username",
+   "fieldtype": "Data",
+   "label": "Username"
+  },
+  {
+   "fieldname": "password",
+   "fieldtype": "Password",
+   "label": "Password"
+  }
+ ],
+ "links": [],
+ "modified": "2023-09-21 19:44:33.593619",
+ "modified_by": "Administrator",
+ "module": "Data Migration",
+ "name": "Data Migration Connector",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

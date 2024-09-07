@@ -1,0 +1,96 @@
+{
+ "actions": [],
+ "autoname": "EST-SERVICIOS-.#####",
+ "creation": "2024-02-02 13:22:14.084201",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "fecha",
+  "ruta",
+  "column_break_2",
+  "servicio",
+  "detalle",
+  "column_break_4",
+  "estado",
+  "section_break_6",
+  "response"
+ ],
+ "fields": [
+  {
+   "fieldname": "fecha",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Fecha",
+   "read_only": 1
+  },
+  {
+   "fieldname": "servicio",
+   "fieldtype": "Data",
+   "label": "Servicio",
+   "read_only": 1
+  },
+  {
+   "fieldname": "estado",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Estado",
+   "options": "Ejecutando\nNo Ejecutando",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "response",
+   "fieldtype": "Long Text",
+   "label": "Response",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ruta",
+   "fieldtype": "Data",
+   "label": "Ruta",
+   "read_only": 1
+  },
+  {
+   "fieldname": "detalle",
+   "fieldtype": "Data",
+   "label": "Detalle"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-02-28 11:06:18.011299",
+ "modified_by": "Administrator",
+ "module": "Core",
+ "name": "Estado Servicios",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,71 @@
+{
+ "actions": [],
+ "autoname": "field:plan_name",
+ "creation": "2017-08-11 05:15:51.482165",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "plan_name",
+  "module",
+  "mappings",
+  "preprocess_method",
+  "postprocess_method"
+ ],
+ "fields": [
+  {
+   "fieldname": "plan_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Plan Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "module",
+   "fieldtype": "Link",
+   "label": "Module",
+   "options": "Module Def"
+  },
+  {
+   "fieldname": "mappings",
+   "fieldtype": "Table",
+   "label": "Mappings",
+   "options": "Data Migration Plan Mapping",
+   "reqd": 1
+  },
+  {
+   "fieldname": "preprocess_method",
+   "fieldtype": "Data",
+   "label": "Preprocess Method"
+  },
+  {
+   "fieldname": "postprocess_method",
+   "fieldtype": "Data",
+   "label": "Postprocess Method"
+  }
+ ],
+ "links": [],
+ "modified": "2023-09-21 21:14:35.232188",
+ "modified_by": "Administrator",
+ "module": "Data Migration",
+ "name": "Data Migration Plan",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
